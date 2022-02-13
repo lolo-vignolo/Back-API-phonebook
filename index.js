@@ -45,7 +45,7 @@ let notes = [
 
 
   app.get("/", (request, response)=>{
-      response.send("<h1>Hello world</h1>")
+      response.send("Lorenzo")
   })
 
   app.get('/api/notes', (request, response) => {
@@ -106,7 +106,9 @@ let notes = [
 
 
 
-  const PORT = process.env.PORT || 3001;
-console.log(`Server running in port ${PORT}`);
+  const PORT = process.env.PORT || 3001
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  })
 
 
